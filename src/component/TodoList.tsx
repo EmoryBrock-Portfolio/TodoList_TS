@@ -30,6 +30,13 @@ export const TodoList: React.FC = () => {
     setTodos([...todos, newTodo]);
   };
 
+  const onDelete = (id:number) => {
+    setTodos((existingTodos) => {
+      return existingTodos.filter((todo) => id !== todo.id)
+    })
+  }
+
+
   return (
     <div className="main-container">
       <h1>Todo List</h1>
@@ -37,10 +44,12 @@ export const TodoList: React.FC = () => {
         {todos.map((todo) => (
           <li
             key={todo.id}
-            onClick={() => handleToggle(todo.id)}
             style={{ textDecoration: todo.completed ? "line-through" : "none" }}
           >
             {todo.text} 
+            {/* <button className="btn_remove" typeof="button" onClick={()=>handleRemove(todo.id)}>Remove</button> */}
+            <button id="btn-cross" onClick={() => handleToggle(todo.id)}>Complete</button>
+            <button id="btn-remove" onClick={() => onDelete(todo.id)}>Remove</button>
           </li>
         ))}
       </ul>
