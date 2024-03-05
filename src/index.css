@@ -42,3 +42,13 @@ button{
   margin-top: 10px;
   cursor: pointer;
 }
+
+.btn-remove{
+  height: 30px;
+  width: 70px;
+  background-color: #ff0f0f;
+  color: white;
+  font-size: 1.00rem;
+  margin-top: 4px;
+  cursor: pointer;
+}

@@ -30,6 +30,12 @@ export const TodoList: React.FC = () => {
     setTodos([...todos, newTodo]);
   };
 
+  function handleRemove(id) {
+    const newTodoList = todos.filter((todo) => todo.id !== id)
+    setTodos(newTodoList)
+  }
+
+
   return (
     <div className="main-container">
       <h1>Todo List</h1>
@@ -41,6 +47,7 @@ export const TodoList: React.FC = () => {
             style={{ textDecoration: todo.completed ? "line-through" : "none" }}
           >
             {todo.text} 
+            <button className="btn_remove" typeof="button" onClick={()=>handleRemove(todo.id)}>Remove</button>
           </li>
         ))}
       </ul>
