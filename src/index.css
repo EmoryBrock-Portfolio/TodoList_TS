@@ -42,8 +42,16 @@ button{
   margin-top: 10px;
   cursor: pointer;
 }
-
-.btn-remove{
+#btn-cross {
+  height: 30px;
+  width: 80px;
+  background-color: #00cf3e;
+  color: white;
+  font-size: 1.00rem;
+  margin-top: 4px;
+  cursor: pointer;
+}
+#btn-remove {
   height: 30px;
   width: 70px;
   background-color: #ff0f0f;

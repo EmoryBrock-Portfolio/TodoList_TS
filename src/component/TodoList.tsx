@@ -30,32 +30,26 @@ export const TodoList: React.FC = () => {
     setTodos([...todos, newTodo]);
   };
 
-  // function handleRemove(id) {
-  //   const newTodoList = todos.filter((todo) => todo.id !== id)
-  //   setTodos(newTodoList)
-  // }
-
-  const onDelete = (index) => {
+  const onDelete = (id:number) => {
     setTodos((existingTodos) => {
-      return existingTodos.filter((_, currentIndex) => currentIndex !== index)
+      return existingTodos.filter((todo) => id !== todo.id)
     })
   }
-
 
 
   return (
     <div className="main-container">
       <h1>Todo List</h1>
       <ul>
-        {todos.map((todo, index) => (
+        {todos.map((todo) => (
           <li
             key={todo.id}
             style={{ textDecoration: todo.completed ? "line-through" : "none" }}
           >
             {todo.text} 
             {/* <button className="btn_remove" typeof="button" onClick={()=>handleRemove(todo.id)}>Remove</button> */}
-            <button onClick={() => handleToggle(todo.id)}>Complete</button>
-            <button onClick={() => onDelete(index)}>Remove</button>
+            <button id="btn-cross" onClick={() => handleToggle(todo.id)}>Complete</button>
+            <button id="btn-remove" onClick={() => onDelete(todo.id)}>Remove</button>
           </li>
         ))}
       </ul>
