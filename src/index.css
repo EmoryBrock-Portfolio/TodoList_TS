@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600");
 
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   margin: 0;
@@ -42,14 +44,15 @@ button{
   margin-top: 10px;
   cursor: pointer;
 }
-#btn-cross {
+#btn-crossout {
   height: 30px;
-  width: 80px;
+  width: 50px;
   background-color: #00cf3e;
   color: white;
   font-size: 1.00rem;
   margin-top: 4px;
   cursor: pointer;
+  border-radius: 7px;
 }
 #btn-remove {
   height: 30px;
@@ -59,4 +62,5 @@ button{
   font-size: 1.00rem;
   margin-top: 4px;
   cursor: pointer;
+  border-radius: 7px;
 }
