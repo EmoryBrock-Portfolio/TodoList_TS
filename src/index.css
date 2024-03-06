@@ -52,6 +52,7 @@ button{
   font-size: 1.00rem;
   margin-top: 4px;
   cursor: pointer;
+  border-radius: 7px;
 }
 #btn-remove {
   height: 30px;
@@ -61,4 +62,5 @@ button{
   font-size: 1.00rem;
   margin-top: 4px;
   cursor: pointer;
+  border-radius: 7px;
 }

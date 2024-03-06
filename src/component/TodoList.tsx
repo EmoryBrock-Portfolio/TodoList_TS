@@ -40,12 +40,14 @@ export const TodoList: React.FC = () => {
   return (
     <div className="main-container">
       <h1 className="text-3l font-bold underline"> Todo List</h1>
-      <ul class="list-inside">
+      <ul className="space-y-3">
         {todos.map((todo) => (
           <li
             key={todo.id}
             style={{ textDecoration: todo.completed ? "line-through" : "none" }}
+            className="text-body-color dark:text-dark-6 flex text-base"
           >
+            <span className="bg-primary mr-2 mt-2 flex h-2 w-full max-w-[8px] items-center justify-center rounded-full text-base"></span>
             {todo.text} 
             <button id="btn-crossout" onClick={() => handleToggle(todo.id)}>{todo.completed ? "Undo" : "Done"}</button>
             <button id="btn-remove" onClick={() => onDelete(todo.id)}>Remove</button>
