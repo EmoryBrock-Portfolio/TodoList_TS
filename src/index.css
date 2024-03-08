@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600"); */
 
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -33,9 +33,9 @@ input{
 
 li{
   margin-top: 15px;
-}
+} */
 
-button{
+/* button{
   height: 50px;
   width: 80px;
   background-color: #1b0fff;
@@ -63,4 +63,8 @@ button{
   margin-top: 4px;
   cursor: pointer;
   border-radius: 7px;
-}
+} */
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";

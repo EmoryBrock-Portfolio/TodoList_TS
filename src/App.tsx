@@ -1,11 +1,12 @@
-import {TodoList} from "./component/TodoList.tsx"
+import {TodoList} from "./component/TodoList"
+
 
 function App() {
 
 
   return (
-    <div className="App">
-    <TodoList />
+    <div className="box-border">
+      <TodoList />
     </div>
   )
 }
