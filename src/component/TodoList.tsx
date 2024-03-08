@@ -25,10 +25,10 @@ export const TodoList: React.FC = () => {
     );
   };
 
-
   const handleClick = () => {
     const newTodo: item = { id: Date.now(), text: input, completed: false };
     setTodos([...todos, newTodo]);
+    setInput("");
   };
 
   const onDelete = (id: number) => {
@@ -52,8 +52,6 @@ export const TodoList: React.FC = () => {
               {todo.text}
             </div>
             <> 
-            {/* id="btns-area"
-            className="border border-cyan-300 items-end"> */}
               <button
                 id="btn-crossout"
                 className="h- min-w-[4rem] rounded-lg border-2 border-emerald-600 bg-emerald-500 text-emerald-50 shadow-lg hover:bg-emerald-600 focus:outline-none focus:ring focus:ring-emerald-600"
@@ -77,6 +75,7 @@ export const TodoList: React.FC = () => {
           className="h-12 min-w-[12rem] rounded-lg indent-4 border focus:outline-none focus:ring focus:ring-blue-600 font-semibold "
           type="text"
           placeholder="Add item"
+          value={input}
           onChange={(e) => setInput(e.currentTarget.value)}
         />
         <button
