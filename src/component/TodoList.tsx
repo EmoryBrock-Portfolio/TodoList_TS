@@ -25,6 +25,7 @@ export const TodoList: React.FC = () => {
     );
   };
 
+
   const handleClick = () => {
     const newTodo: item = { id: Date.now(), text: input, completed: false };
     setTodos([...todos, newTodo]);
@@ -37,8 +38,9 @@ export const TodoList: React.FC = () => {
   };
 
   return (
-    <div className="rounded-md w-2/3 bg-white flex flex-col justify-center items-center">
-      <h1 className="text-3xl font-bold underline"> Todo List</h1>
+    <div className="bg-white flex flex-col justify-center items-center shadow-lg
+     py-5 overflow-hidden">
+      <h1 className="text-4xl font-bold underline pb-6"> Todo List</h1>
       <ul role="list" className="divide-y divide-gray-400">
         {todos.map((todo) => (
           <li key={todo.id} className="flex gap-x-1 py-4">
@@ -72,7 +74,7 @@ export const TodoList: React.FC = () => {
       </ul>
       <section>
         <input
-          className="h-12 min-w-[12rem] rounded-lg indent-4 shadow-lg focus:outline-none focus:ring focus:ring-blue-600 font-semibold "
+          className="h-12 min-w-[12rem] rounded-lg indent-4 border focus:outline-none focus:ring focus:ring-blue-600 font-semibold "
           type="text"
           placeholder="Add item"
           onChange={(e) => setInput(e.currentTarget.value)}
